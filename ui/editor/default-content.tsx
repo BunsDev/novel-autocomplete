@@ -86,7 +86,7 @@ const DEFAULT_EDITOR_CONTENT = {
                     {
                       type: "link",
                       attrs: {
-                        href: "https://twitter.com/steventey/status/1669762868416512000",
+                        href: "https://twitter.com/0xBuns",
                         target: "_blank",
                         class:
                           "text-stone-400 underline underline-offset-[3px] hover:text-stone-600 transition-colors cursor-pointer",
@@ -113,7 +113,7 @@ const DEFAULT_EDITOR_CONTENT = {
                     {
                       type: "link",
                       attrs: {
-                        href: "https://github.com/steven-tey/novel",
+                        href: "https://github.com/BunsDev/novel",
                         target: "_blank",
                         class:
                           "text-stone-400 underline underline-offset-[3px] hover:text-stone-600 transition-colors cursor-pointer",

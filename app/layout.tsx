@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title,
     description,
     card: "summary_large_image",
-    creator: "@steventey",
+    creator: "@0xBuns",
   },
   metadataBase: new URL("https://novel.sh"),
   themeColor: "#ffffff",

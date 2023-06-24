@@ -52,7 +52,7 @@ export async function POST(req: Request): Promise<Response> {
         role: "system",
         content:
           "You are an AI writing assistant that continues existing text based on context from prior text. " +
-          "Give more weight/priority to the later characters than the beginning ones. Make sure to construct complete sentences.",
+          "Give more weight/priority to the later characters than the beginning ones. Make sure to construct complete sentences that end with a punctuation mark.",
       },
       {
         role: "user",

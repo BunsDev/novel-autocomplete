@@ -9,14 +9,14 @@ import { useDebouncedCallback } from "use-debounce";
 import { useCompletion } from "ai/react";
 import { toast } from "sonner";
 import va from "@vercel/analytics";
-import DEFAULT_EDITOR_CONTENT from "./default-content";
+// import DEFAULT_EDITOR_CONTENT from "./default-content";
 
 import { EditorBubbleMenu } from "./components";
 
 export default function Editor() {
   const [content, setContent] = useLocalStorage(
-    "content",
-    DEFAULT_EDITOR_CONTENT,
+    "content", ''
+    // DEFAULT_EDITOR_CONTENT,
   );
   const [saveStatus, setSaveStatus] = useState("Saved");
 
@@ -43,7 +43,7 @@ export default function Editor() {
         selection.from,
         "\n",
       );
-      if (lastTwo === "++" && !isLoading) {
+      if (lastTwo === "//" && !isLoading) {
         e.editor.commands.deleteRange({
           from: selection.from - 2,
           to: selection.from,
@@ -93,7 +93,7 @@ export default function Editor() {
 
   useEffect(() => {
     // if user presses escape or cmd + z and it's loading,
-    // stop the request, delete the completion, and insert back the "++"
+    // stop the request, delete the completion, and insert back the "//"
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape" || (e.metaKey && e.key === "z")) {
         stop();
@@ -103,7 +103,7 @@ export default function Editor() {
             to: editor.state.selection.from,
           });
         }
-        editor?.commands.insertContent("++");
+        editor?.commands.insertContent("//");
       }
     };
     const mousedownHandler = (e: MouseEvent) => {
